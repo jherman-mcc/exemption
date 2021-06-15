@@ -1,12 +1,12 @@
 // Define class with name, number and shift
 open class Residential(customerName: String,
-                   customerPhone: String,
-                   customerAddress: String,
-                   squareFootage: Long,
-                   var propertyName: String,
-                   var constantRate: Double,
-                   var totalRate: Double,
-                   var seniorField: Boolean):
+                       customerPhone: String,
+                       customerAddress: String,
+                       squareFootage: Long,
+                       var propertyName: String,
+                       var constantRate: Double,
+                       var totalRate: Double,
+                       var seniorField: Boolean):
     Customer(customerName,customerPhone, customerAddress, squareFootage) {
     // define the fullInfo including name
 //    var fullInfo: String ="  "
@@ -47,7 +47,7 @@ open class Residential(customerName: String,
         }
         constantRate = constantRate + (constantRate * discount)
         println("${customerName} ${propertyName} ${totalRate} ${seniorField}")
-         }
+    }
 
 
     // define printAll by printing fullInfo

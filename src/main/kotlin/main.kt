@@ -31,41 +31,52 @@ fun main() {
         println("1) Residential Customer")
         println("2) Commercial Customer")
         println("3) Done")
+        try {
         menuChoice = readLine()!!.toInt()
-        when (menuChoice){
-            1 -> {
-                person1.resweeklyCharges()
-                person2.resweeklyCharges()
-                person3.resweeklyCharges()
-                person4.resweeklyCharges()
-                person5.resweeklyCharges()
-                person6.resweeklyCharges()
-                person7.resweeklyCharges()
-                person8.resweeklyCharges()
-                person9.resweeklyCharges()
-                person10.resweeklyCharges()
-                person11.resweeklyCharges()
-                person12.resweeklyCharges()
-            }
-            2 -> {
+            println("exception")
+            var Exception = false
+            if (menuChoice < 1)
+                Exception = true
+            if (menuChoice > 3)
+                Exception = true
+//            checkmenuChoice()
+            when (menuChoice) {
+                1 -> {
+                    person1.resweeklyCharges()
+                    person2.resweeklyCharges()
+                    person3.resweeklyCharges()
+                    person4.resweeklyCharges()
+                    person5.resweeklyCharges()
+                    person6.resweeklyCharges()
+                    person7.resweeklyCharges()
+                    person8.resweeklyCharges()
+                    person9.resweeklyCharges()
+                    person10.resweeklyCharges()
+                    person11.resweeklyCharges()
+                    person12.resweeklyCharges()
+                }
+                2 -> {
 
-                person13.comweeklyCharges()
-                person14.comweeklyCharges()
-                person15.comweeklyCharges()
-                person16.comweeklyCharges()
-                person17.comweeklyCharges()
-                person18.comweeklyCharges()
-                person19.comweeklyCharges()
-                person20.comweeklyCharges()
-                person21.comweeklyCharges()
-                person22.comweeklyCharges()
-                person23.comweeklyCharges()
-                person24.comweeklyCharges()
-                 }
-            3 -> println("Thank you                                                                                                           ")
-            !in 1..3 -> print("This is not a valid choice please choose again.                                                                                                      ")
+                    person13.comweeklyCharges()
+                    person14.comweeklyCharges()
+                    person15.comweeklyCharges()
+                    person16.comweeklyCharges()
+                    person17.comweeklyCharges()
+                    person18.comweeklyCharges()
+                    person19.comweeklyCharges()
+                    person20.comweeklyCharges()
+                    person21.comweeklyCharges()
+                    person22.comweeklyCharges()
+                    person23.comweeklyCharges()
+                    person24.comweeklyCharges()
+                }
+                3 -> println("Thank you")
+             }
+        }
+            catch(ex: Exception)
+        {
+                println("Not a valid selection.")
         }
     } while(menuChoice != 3)
-
 
 }
